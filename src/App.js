@@ -1,6 +1,7 @@
 import React from 'react'
 
 import BioPanel from "./components/Panels/BioPanel"
+import ContactPanel from './components/Panels/ContactPanel'
 import Project1Panel from './components/Panels/Project1Panel'
 
 const App = () => {
@@ -20,7 +21,7 @@ const App = () => {
                 <Project1Panel />
             </div>
             <div>
-                Third panel
+                <ContactPanel />
             </div>
         </div>
     )

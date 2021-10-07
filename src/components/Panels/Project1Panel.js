@@ -7,29 +7,24 @@ const Project1Panel = () => {
     const containerDivStyle = {
         display: 'flex',
         height: 1080,
-        borderTop: '5px solid #909090',
-        borderBottom: '5px solid #909090',
     }
 
     const leftPanelStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
         position: 'relative',
         flexBasis: '34%',
         backgroundColor: 'white',
-        paddingTop: '14%',
         paddingLeft: '6.66%',
         paddingRight: '5.73%',
         height: '100%',
-        //justifyContent: 'center',
     }
 
     const rightPanelStyle = {
         flexBasis: '66%',
         backgroundColor: 'grey',
         height: '100%',
-    }
-
-    const strengthgapStyle = {
-        maxWidth: '100%',
     }
 
     const projectDivStyle = {
@@ -65,13 +60,17 @@ const Project1Panel = () => {
         marginBottom: '12%',
     }
 
+    const buttonsDivStyle = {
+        height: '5%',
+    }
+
     const seeItButtonStyle = {
         fontSize: '1.9em',
         fontWeight: 500,
         backgroundColor: 'white',
         border: '3px solid black',
         width: '43.5%',
-        height: '6.3%',
+        height: '100%',
     }
 
     const repoButtonStyle = {
@@ -82,7 +81,7 @@ const Project1Panel = () => {
         border: '3px solid black',
         color: 'white',
         width: '31%',
-        height: '6.3%',
+        height: '100%',
         textAlign: 'left',
         paddingLeft: '15%',
         marginLeft: '4.75%',
@@ -94,6 +93,10 @@ const Project1Panel = () => {
         left: 15,
         top: 6,
     }
+
+    const strengthgapStyle = {
+        maxWidth: '100%',
+    }
     
     return (
         <div style={ containerDivStyle }>
@@ -104,16 +107,18 @@ const Project1Panel = () => {
                 <h2 style={ h2Style }>A Tool to Check for Muscle Imbalance</h2>
 
                 <p style={ paraStyle }>
-                    A common struggle for people who have just started<br />
-                    working out is to ensure that the program they follow will<br />
-                    target all muscle groups.<br /><br />
-                    Not doing so - for instance, including chest exercises but<br />
-                    no back exercises - can lead to muscle imbalance that<br />
-                    can be detrimental to your health in the long term.
+                    A project made with the MERN stack (MongoDB, Express, React, Node.js).<br /><br />
+                    Gyms can be intimidating, especially for newcomers. Strength Gap is my attempt
+                    at alleviating one concern: <em>What should I do there?</em><br /><br />
+                    It allows the user to select any exercise and see which muscle group
+                    they primarily target, and then combine those exercises to check for potential
+                    gaps in your exercise routine.<br /><br />
+                    It comes complete with a registration feature to save, edit, and delete your workouts.
                 </p>
-
-                <button style={ seeItButtonStyle }>See it in action</button>
-                <button style={ repoButtonStyle }><i style={ githubStyle } className='fab fa-github' />Repo</button>
+                <div style={ buttonsDivStyle }>
+                    <button style={ seeItButtonStyle }>See it in action</button>
+                    <button style={ repoButtonStyle }><i style={ githubStyle } className='fab fa-github' />Repo</button>
+                </div>
             </div>
             <div style={ rightPanelStyle }>
                 <img style={ strengthgapStyle } src={ strengthgap } alt='Mock-up of one of my projects, Strength Gap' />

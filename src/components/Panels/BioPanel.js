@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-// import envelope from '../../images/envelope.png'
 import polaroid from '../../images/polaroid.png'
 import cypress from '../../images/cypress.png'
 import express from '../../images/express.png'
@@ -22,12 +20,13 @@ const BioPanel = () => {
 
     const leftPanelStyle = {
         flexBasis: '66%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
         backgroundColor: '#EFEFEF',
-        paddingTop: '14%',
         paddingLeft: '6.5%',
         paddingRight: '6.5%',
         height: '100%',
-        //justifyContent: 'center',
     }
 
     const rightPanelStyle = {
