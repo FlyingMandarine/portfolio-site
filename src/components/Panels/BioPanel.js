@@ -1,8 +1,8 @@
 import React from 'react'
 
-// import envelope from '../../images/envelope.png'
-// import strengthgap from '../../images/strengthgap.png'
 
+// import envelope from '../../images/envelope.png'
+import polaroid from '../../images/polaroid.png'
 import cypress from '../../images/cypress.png'
 import express from '../../images/express.png'
 import jest from '../../images/jest.png'
@@ -25,6 +25,7 @@ const BioPanel = () => {
         backgroundColor: '#EFEFEF',
         paddingTop: '14%',
         paddingLeft: '6.5%',
+        paddingRight: '6.5%',
         height: '100%',
         //justifyContent: 'center',
     }
@@ -38,12 +39,15 @@ const BioPanel = () => {
     const h1Style = {
         fontSize: '5.8rem',
         fontWeight: 500,
+        marginBottom: '2.1%',
     }
 
     const h2Style = {
-        color: '#838383',
         fontSize: '3.7rem',
         fontWeight: 500,
+        color: '#838383',
+        marginTop: 0,
+        marginBottom: '4.4%',
     }
 
     const paraStyle = {
@@ -70,6 +74,11 @@ const BioPanel = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+    }
+
+    const polaroidStyle = {
+        maxWidth: '100%',
+        height: '100%',
     }
 
     return (
@@ -117,7 +126,7 @@ const BioPanel = () => {
                 </div>
             </div>
             <div style={ rightPanelStyle }>
-                <p>My picture here</p>
+                <img style={ polaroidStyle } src={ polaroid } alt="Hey! It's me!" />
             </div>
         </div>
     )
