@@ -25,6 +25,7 @@ const Project1Panel = () => {
         flexBasis: '66%',
         backgroundColor: 'grey',
         height: '100%',
+        background: `url(${ strengthgap }) center/cover`,
     }
 
     const projectDivStyle = {
@@ -68,7 +69,7 @@ const Project1Panel = () => {
         fontSize: '1.9em',
         fontWeight: 500,
         backgroundColor: 'white',
-        border: '3px solid black',
+        border: 'solid 3px black',
         width: '43.5%',
         height: '100%',
     }
@@ -78,7 +79,7 @@ const Project1Panel = () => {
         fontSize: '1.9em',
         fontWeight: 500,
         backgroundColor: 'black',
-        border: '3px solid black',
+        border: 'solid 3px black',
         color: 'white',
         width: '31%',
         height: '100%',
@@ -92,10 +93,6 @@ const Project1Panel = () => {
         fontSize: '3.2rem',
         left: 15,
         top: 6,
-    }
-
-    const strengthgapStyle = {
-        maxWidth: '100%',
     }
     
     return (
@@ -121,7 +118,6 @@ const Project1Panel = () => {
                 </div>
             </div>
             <div style={ rightPanelStyle }>
-                <img style={ strengthgapStyle } src={ strengthgap } alt='Mock-up of one of my projects, Strength Gap' />
             </div>
         </div>
     )

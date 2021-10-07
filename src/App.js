@@ -9,7 +9,8 @@ const App = () => {
     const containerDivStyle = {
         display: 'flex',
         flexDirection: 'column',
-        //alignItems: 'center',
+        maxWidth: 1920,
+        margin: 'auto',
     }
 
     return (

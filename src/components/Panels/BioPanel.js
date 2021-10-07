@@ -14,8 +14,8 @@ const BioPanel = () => {
     const containerDivStyle = {
         display: 'flex',
         height: 1080,
-        borderTop: '5px solid #909090',
-        borderBottom: '5px solid #909090',
+        borderTop: 'solid 5px #909090',
+        borderBottom: 'solid 5px #909090',
     }
 
     const leftPanelStyle = {
@@ -31,8 +31,7 @@ const BioPanel = () => {
 
     const rightPanelStyle = {
         flexBasis: '34%',
-        backgroundColor: 'grey',
-        height: '100%',
+        background: `url(${ polaroid }) center/cover`,
     }
 
     const h1Style = {
@@ -52,7 +51,7 @@ const BioPanel = () => {
     const paraStyle = {
         fontSize: '1.8rem',
         fontWeight: 400,
-        marginBottom: '10%'
+        marginBottom: '13.2%',
     }
 
     const skillsDivStyle = {
@@ -61,7 +60,7 @@ const BioPanel = () => {
         backgroundColor: 'white',
         width: '100%',
         height: 160,
-        border: '4px solid #FEE034',
+        border: 'solid 4px #FEE034',
         alignItems: 'center',
     }
 
@@ -75,9 +74,12 @@ const BioPanel = () => {
         alignItems: 'center',
     }
 
-    const polaroidStyle = {
-        maxWidth: '100%',
-        height: '100%',
+    const scrollWin = () => {
+        //window.scrollTo(0, 1000)
+        window.scroll({
+            top: 1000,
+            behavior: 'smooth',
+        })
     }
 
     return (
@@ -125,7 +127,7 @@ const BioPanel = () => {
                 </div>
             </div>
             <div style={ rightPanelStyle }>
-                <img style={ polaroidStyle } src={ polaroid } alt="Hey! It's me!" />
+                <h1 onClick={ () => scrollWin() }>HELLO</h1>
             </div>
         </div>
     )
