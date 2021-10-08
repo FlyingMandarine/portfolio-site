@@ -14,6 +14,8 @@ const BioPanel = () => {
     const containerDivStyle = {
         display: 'flex',
         height: 1080,
+        // Height 100vh or leave as is with black margins top and bottom?
+        //height: '100vh',
         borderTop: 'solid 5px #909090',
         borderBottom: 'solid 5px #909090',
     }
@@ -31,6 +33,7 @@ const BioPanel = () => {
 
     const rightPanelStyle = {
         flexBasis: '34%',
+        position: 'relative',
         background: `url(${ polaroid }) center/cover`,
     }
 
@@ -52,6 +55,7 @@ const BioPanel = () => {
         fontSize: '1.8rem',
         fontWeight: 400,
         marginBottom: '13.2%',
+        lineHeight: 1.4,
     }
 
     const skillsDivStyle = {
@@ -76,8 +80,19 @@ const BioPanel = () => {
         alignItems: 'center',
     }
 
+    const darkToggleStyle = {
+        fontSize: '1.6em',
+        fontWeight: 400,
+        position: 'absolute',
+        top: '3.9%',
+        right: '7%',
+    }
+
+    const darkSpanStyle = {
+        marginRight: 20,
+    }
+
     const scrollWin = () => {
-        //window.scrollTo(0, 1000)
         window.scroll({
             top: 1000,
             behavior: 'smooth',
@@ -129,6 +144,13 @@ const BioPanel = () => {
                 </div>
             </div>
             <div style={ rightPanelStyle }>
+                <div style={ darkToggleStyle }>
+                    <span style={ darkSpanStyle }>To the dark side!</span>
+                    <label className='switch'>
+                        <input type='checkbox' />
+                        <span className='slider'></span>
+                    </label>
+                </div>
                 <h1 onClick={ () => scrollWin() }>HELLO</h1>
             </div>
         </div>

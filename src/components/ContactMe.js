@@ -16,6 +16,7 @@ const ContactMe = () => {
         width: 222,
         height: 58,
         cursor: 'pointer',
+        zIndex: 1,
     }
 
     const envelopeStyle = {
