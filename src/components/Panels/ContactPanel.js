@@ -1,6 +1,6 @@
 import React from 'react'
 
-import envelope from '../../images/envelope.png'
+import envelope from '../../images/envelope-transparent.png'
 
 const ContactPanel = () => {
 
@@ -24,14 +24,14 @@ const ContactPanel = () => {
     }
 
     const rightPanelStyle = {
+        fontSize: '5em',
         flexBasis: '34%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
+        //backgroundColor: 'rgba(0,0,0,0.5)',
         background: `url(${ envelope }) center/cover`,
-        fontSize: '5em',
-        opacity: '46%',
     }
 
     const h1Style = {
@@ -84,6 +84,7 @@ const ContactPanel = () => {
         color: 'black',
         marginLeft: 20,
         marginRight: 20,
+        opacity: '900%',
     }
 
     const buttonEnter = (e) => {
@@ -135,7 +136,7 @@ const ContactPanel = () => {
             </div>
             <div style={ rightPanelStyle }>
                 <div>
-                    <a href='https://www.linkedin.com/in/patrice-hermenault/'  target='_blank' rel='noreferrer'>
+                    <a href='https://www.linkedin.com/in/patrice-hermenault/' target='_blank' rel='noreferrer'>
                         <i style={ iconsStyle }
                             title='Check out my LinkedIn!'
                             className='fab fa-linkedin'
@@ -143,7 +144,7 @@ const ContactPanel = () => {
                             onMouseLeave={ (e) => iconLeave(e) }
                         />
                     </a>
-                    <a href='https://github.com/FlyingMandarine'  target='_blank' rel='noreferrer'>
+                    <a href='https://github.com/FlyingMandarine' target='_blank' rel='noreferrer'>
                         <i style={ iconsStyle }
                             title='Have a look at my GitHub!'
                             className='fab fa-github-square'

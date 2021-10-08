@@ -4,6 +4,8 @@ import BioPanel from "./components/Panels/BioPanel"
 import ContactPanel from './components/Panels/ContactPanel'
 import Project1Panel from './components/Panels/Project1Panel'
 
+import ContactMe from './components/ContactMe'
+
 const App = () => {
 
     const containerDivStyle = {
@@ -15,6 +17,7 @@ const App = () => {
 
     return (
         <div style={ containerDivStyle }>
+            <ContactMe />
             <div>
                 <BioPanel />
             </div>

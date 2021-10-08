@@ -65,26 +65,27 @@ const Project1Panel = () => {
         height: '5%',
     }
 
-    const seeItButtonStyle = {
+    const seeItSpanStyle = {
         fontSize: '1.9em',
         fontWeight: 500,
         backgroundColor: 'white',
+        color: 'black',
         border: 'solid 3px black',
-        width: '43.5%',
-        height: '100%',
+        padding: '3%',
     }
 
-    const repoButtonStyle = {
+    const linkStyle = {
+        textDecoration: 'none',
+    }
+
+    const repoSpanStyle = {
         position: 'relative',
         fontSize: '1.9em',
         fontWeight: 500,
         backgroundColor: 'black',
         border: 'solid 3px black',
         color: 'white',
-        width: '31%',
-        height: '100%',
-        textAlign: 'left',
-        paddingLeft: '15%',
+        padding: '3% 3% 3% 14%',
         marginLeft: '4.75%',
     }
 
@@ -93,6 +94,21 @@ const Project1Panel = () => {
         fontSize: '3.2rem',
         left: 15,
         top: 6,
+        pointerEvents: 'none',
+    }
+
+    const buttonEnter = (e) => {
+        e.target.style.backgroundColor = '#FEE035'
+    }
+
+    const seeItButtonLeave = (e) => {
+        e.target.style.backgroundColor = '#FFFFFF'
+        e.target.style.border = 'solid 3px black'
+    }
+
+    const repoButtonLeave = (e) => {
+        e.target.style.backgroundColor = 'black'
+        e.target.style.border = 'solid 3px black'
     }
     
     return (
@@ -113,8 +129,19 @@ const Project1Panel = () => {
                     It comes complete with a registration feature to save, edit, and delete your workouts.
                 </p>
                 <div style={ buttonsDivStyle }>
-                    <button style={ seeItButtonStyle }>See it in action</button>
-                    <button style={ repoButtonStyle }><i style={ githubStyle } className='fab fa-github' />Repo</button>
+                    <a style={ linkStyle } href='https://www.patrice-hermenault.com' target='_blank' rel='noreferrer'>
+                        <span style={ seeItSpanStyle }
+                            onMouseEnter={ (e) => buttonEnter(e) }
+                            onMouseLeave={ (e) => seeItButtonLeave(e) }>See it in action
+                        </span>
+                    </a>
+                    <a style={ linkStyle } href='https://github.com/FlyingMandarine/strengthgap-react' target='_blank' rel='noreferrer'>
+                        <span style={ repoSpanStyle }
+                            onMouseEnter={ (e) => buttonEnter(e) }
+                            onMouseLeave={ (e) => repoButtonLeave(e) }>
+                            <i style={ githubStyle } className='fab fa-github' />Repo
+                        </span>
+                    </a>
                 </div>
             </div>
             <div style={ rightPanelStyle }>

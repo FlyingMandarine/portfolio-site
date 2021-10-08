@@ -60,12 +60,14 @@ const BioPanel = () => {
         backgroundColor: 'white',
         width: '100%',
         height: 160,
+        //height: 200,
         border: 'solid 4px #FEE034',
         alignItems: 'center',
     }
 
     const skillsStyle = {
-        width: '6.3em',
+        //width: '6.3em',
+        width: '8.3em',
     }
 
     const imgStyle = {
