@@ -9,19 +9,19 @@ const ContactMe = () => {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'fixed',
-        bottom: 45,
-        right: 47,
+        bottom: '4.3%',
+        right: '2.4%',
         backgroundColor: '#FDE000',
         boxShadow: '0 3px 6px #00000029',
-        width: 222,
-        height: 58,
+        width: '11.5%',
+        height: '5.5%',
         cursor: 'pointer',
         zIndex: 1,
     }
 
     const envelopeStyle = {
-        fontSize: '2.3rem',
-        marginRight: 20,
+        fontSize: '1.1em',
+        marginRight: '8.5%',
     }
 
     const scrollWin = () => {

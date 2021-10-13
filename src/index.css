@@ -28,6 +28,7 @@ html {
     position: relative;
     display: inline-block;
     width: 62px;
+    /* width: 50%; */
     height: 30px;
 }
 
@@ -81,4 +82,118 @@ input:checked + .slider:before {
     -webkit-transform: translateX(25px);
     -ms-transform: translateX(25px);
     transform: translateX(25px);
+}
+
+.biopanel-right {
+    background-size: 100% 101%;
+}
+
+.fa-github {
+    left: 15px;
+}
+
+@media only screen and (min-width: 1800px) {
+    .app-container {
+        width: 1920px;
+    }
+    
+    .panel-container {
+        height: 1080px;
+    }
+
+    .fa-github {
+        font-size: 1.7em;
+        top: 15%;
+    }
+}
+
+@media only screen and (max-width: 1799px) {
+    .app-container {
+        width: 1600px;
+    }
+    
+    .panel-container {
+        height: 900px;
+    }
+
+    .fa-github {
+        font-size: 1.5em;
+        top: 7px;
+        left: 10px;
+    }
+
+    .biopanel-right {
+        background-size: 600px 1100px;
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 1599px) {
+    body {
+        font-size: .9rem;
+    }
+
+    .app-container {
+        width: 1440px;
+    }
+    
+    .panel-container {
+        height: 810px;
+    }
+}
+
+@media only screen and (max-width: 1439px) {
+    body {
+        font-size: .6rem;
+    }
+
+    .app-container {
+        width: 1024px;
+    }
+    
+    .panel-container {
+        height: 576px;
+    }
+
+    .biopanel-right {
+        background-size: 360px 600px;
+    }
+
+    .fa-github {
+        font-size: 1.2em;
+        top: 7px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    body {
+        font-size: .5rem;
+    }
+
+    .app-container {
+        width: 768px;
+    }
+    
+    .panel-container {
+        height: 432px;
+    }
+
+    .biopanel-right {
+        background-size: 268px 500px;
+    }
+
+    .fa-github {
+        top: 4px;
+        left: 6px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .app-container {
+        width: 320px;
+    }
+    
+    .panel-container {
+        height: 180px;
+    }
 }

@@ -11,12 +11,11 @@ const App = () => {
     const containerDivStyle = {
         display: 'flex',
         flexDirection: 'column',
-        maxWidth: 1920,
         margin: 'auto',
     }
 
     return (
-        <div style={ containerDivStyle }>
+        <div style={ containerDivStyle } className='app-container'>
             <ContactMe />
             <div>
                 <BioPanel />

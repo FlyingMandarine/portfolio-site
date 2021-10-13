@@ -6,7 +6,6 @@ const Project1Panel = () => {
 
     const containerDivStyle = {
         display: 'flex',
-        height: 1080,
     }
 
     const leftPanelStyle = {
@@ -35,9 +34,9 @@ const Project1Panel = () => {
         fontSize: '2.4em',
         fontWeight: 500,
         backgroundColor: '#FEE035',
-        width: '23rem',
-        height: '5.2rem',
-        lineHeight: '5.2rem',
+        width: '35.2%',
+        height: '4.8%',
+        lineHeight: '200%',
         textAlign: 'right',
         paddingRight: '7.5%',
     }
@@ -91,9 +90,6 @@ const Project1Panel = () => {
 
     const githubStyle = {
         position: 'absolute',
-        fontSize: '3.2rem',
-        left: 15,
-        top: 6,
         pointerEvents: 'none',
     }
 
@@ -112,7 +108,7 @@ const Project1Panel = () => {
     }
     
     return (
-        <div style={ containerDivStyle }>
+        <div style={ containerDivStyle } className='panel-container'>
             <div style={ leftPanelStyle }>
                 <div style={ projectDivStyle }>PROJECT</div>
 

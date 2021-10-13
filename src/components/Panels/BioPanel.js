@@ -13,9 +13,6 @@ const BioPanel = () => {
 
     const containerDivStyle = {
         display: 'flex',
-        height: 1080,
-        // Height 100vh or leave as is with black margins top and bottom?
-        //height: '100vh',
         borderTop: 'solid 5px #909090',
         borderBottom: 'solid 5px #909090',
     }
@@ -34,17 +31,19 @@ const BioPanel = () => {
     const rightPanelStyle = {
         flexBasis: '34%',
         position: 'relative',
-        background: `url(${ polaroid }) center/cover`,
+        backgroundImage: `url(${ polaroid })`,
+        backgroundRepeat: 'no-repeat',
+        //background: `url(${ polaroid }) center/cover no-repeat`,
     }
 
     const h1Style = {
-        fontSize: '5.8rem',
+        fontSize: '5.8em',
         fontWeight: 500,
         marginBottom: '2.1%',
     }
 
     const h2Style = {
-        fontSize: '3.7rem',
+        fontSize: '3.7em',
         fontWeight: 500,
         color: '#838383',
         marginTop: 0,
@@ -52,7 +51,7 @@ const BioPanel = () => {
     }
 
     const paraStyle = {
-        fontSize: '1.8rem',
+        fontSize: '1.8em',
         fontWeight: 400,
         marginBottom: '13.2%',
         lineHeight: 1.4,
@@ -63,8 +62,7 @@ const BioPanel = () => {
         justifyContent: 'space-around',
         backgroundColor: 'white',
         width: '100%',
-        height: 160,
-        //height: 200,
+        height: '20%',
         border: 'solid 4px #FEE034',
         alignItems: 'center',
     }
@@ -100,7 +98,7 @@ const BioPanel = () => {
     }
 
     return (
-        <div style={ containerDivStyle }>
+        <div style={ containerDivStyle } className='panel-container'>
             <div style={ leftPanelStyle }>
                 <h1 style={ h1Style }>Patrice Hermenault</h1>
                 <h2 style={ h2Style }>Full Stack Developer</h2>
@@ -143,7 +141,7 @@ const BioPanel = () => {
                     </div>
                 </div>
             </div>
-            <div style={ rightPanelStyle }>
+            <div style={ rightPanelStyle } className='biopanel-right'>
                 <div style={ darkToggleStyle }>
                     <span style={ darkSpanStyle }>To the dark side!</span>
                     <label className='switch'>

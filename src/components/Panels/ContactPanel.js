@@ -6,7 +6,6 @@ const ContactPanel = () => {
 
     const containerDivStyle = {
         display: 'flex',
-        height: 1080,
         borderTop: 'solid 5px #909090',
         borderBottom: 'solid 5px #909090',
         backgroundColor: 'white',
@@ -58,7 +57,7 @@ const ContactPanel = () => {
         backgroundColor: '#EFEFEF',
         border: 'solid 1px #909090',
         width: '64%',
-        height: '3.3rem',
+        height: '8.5%',
         marginBottom: '3%',
         padding: '1em',
     }
@@ -67,7 +66,7 @@ const ContactPanel = () => {
         backgroundColor: '#EFEFEF',
         border: 'solid 1px #909090',
         width: '64%',
-        height: '13.2rem',
+        height: '36%',
         marginBottom: '5.8%',
         padding: '1em',
     }
@@ -77,7 +76,7 @@ const ContactPanel = () => {
         fontWeight: 500,
         border: 'solid 3px black',
         width: '17.5%',
-        height: 54,
+        height: '12.5%',
     }
 
     const iconsStyle = {
@@ -107,7 +106,7 @@ const ContactPanel = () => {
     }
 
     return (
-        <div style={ containerDivStyle }>
+        <div style={ containerDivStyle } className='panel-container'>
             <div style={ leftPanelStyle }>
                 <h1 style={ h1Style }>Contact me</h1>
                 
