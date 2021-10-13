@@ -84,6 +84,11 @@ input:checked + .slider:before {
     transform: translateX(25px);
 }
 
+.contactme-div {
+    width: 222px;
+    height: 58px;
+}
+
 .biopanel-right {
     background-size: 100% 101%;
 }
@@ -116,6 +121,15 @@ input:checked + .slider:before {
         height: 900px;
     }
 
+    body {
+        font-size: .9em;
+    }
+
+    .contactme-div {
+        width: 180px;
+        height: 46px;
+    }
+
     .fa-github {
         font-size: 1.5em;
         top: 7px;
@@ -130,7 +144,7 @@ input:checked + .slider:before {
 
 @media only screen and (max-width: 1599px) {
     body {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .app-container {
@@ -139,6 +153,11 @@ input:checked + .slider:before {
     
     .panel-container {
         height: 810px;
+    }
+
+    .contactme-div {
+        width: 150px;
+        height: 46px;
     }
 }
 
@@ -153,6 +172,11 @@ input:checked + .slider:before {
     
     .panel-container {
         height: 576px;
+    }
+
+    .contactme-div {
+        width: 130px;
+        height: 36px;
     }
 
     .biopanel-right {
@@ -178,6 +202,11 @@ input:checked + .slider:before {
         height: 432px;
     }
 
+    .contactme-div {
+        width: 100px;
+        height: 30px;
+    }
+
     .biopanel-right {
         background-size: 268px 500px;
     }
@@ -189,11 +218,21 @@ input:checked + .slider:before {
 }
 
 @media only screen and (max-width: 767px) {
+    body {
+        font-size: .2rem;
+    }
+
     .app-container {
         width: 320px;
     }
     
     .panel-container {
-        height: 180px;
+        /* height: 180px; */
+        height: 405px;
+    }
+
+    .contactme-div {
+        width: 50px;
+        height: 15px;
     }
 }

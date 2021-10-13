@@ -36,7 +36,7 @@ const Project1Panel = () => {
         backgroundColor: '#FEE035',
         width: '35.2%',
         height: '4.8%',
-        lineHeight: '200%',
+        lineHeight: '220%',
         textAlign: 'right',
         paddingRight: '7.5%',
     }
@@ -95,6 +95,7 @@ const Project1Panel = () => {
 
     const buttonEnter = (e) => {
         e.target.style.backgroundColor = '#FEE035'
+        e.target.style.color = 'black'
     }
 
     const seeItButtonLeave = (e) => {
@@ -104,6 +105,7 @@ const Project1Panel = () => {
 
     const repoButtonLeave = (e) => {
         e.target.style.backgroundColor = 'black'
+        e.target.style.color = 'white'
         e.target.style.border = 'solid 3px black'
     }
     

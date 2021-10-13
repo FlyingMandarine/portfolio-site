@@ -9,12 +9,10 @@ const ContactMe = () => {
         justifyContent: 'center',
         alignItems: 'center',
         position: 'fixed',
-        bottom: '4.3%',
+        top: '90vh',
         right: '2.4%',
         backgroundColor: '#FDE000',
         boxShadow: '0 3px 6px #00000029',
-        width: '11.5%',
-        height: '5.5%',
         cursor: 'pointer',
         zIndex: 1,
     }
@@ -32,7 +30,7 @@ const ContactMe = () => {
     }
 
     return (
-        <div style={ containerStyle } onClick={ () => scrollWin() }>
+        <div style={ containerStyle } className='contactme-div' onClick={ () => scrollWin() }>
             <i style={ envelopeStyle } className='fas fa-envelope' />
             Contact me
         </div>
