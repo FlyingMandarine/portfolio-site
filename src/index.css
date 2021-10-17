@@ -89,6 +89,10 @@ input:checked + .slider:before {
     height: 58px;
 }
 
+.project-panel-container {
+    display: flex;
+}
+
 .biopanel-right {
     background-size: 100% 101%;
 }
@@ -97,12 +101,19 @@ input:checked + .slider:before {
     left: 15px;
 }
 
-@media only screen and (min-width: 1800px) {
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1920px) {
     .app-container {
         width: 1920px;
     }
     
-    .panel-container {
+    .bio-panel-container,
+    .project-panel-container,
+    .contact-panel-container {
         height: 1080px;
     }
 
@@ -112,12 +123,32 @@ input:checked + .slider:before {
     }
 }
 
+@media only screen and (max-width: 1919px) {
+    .app-container {
+        width: 1800px;
+    }
+    
+    .bio-panel-container,
+    .project-panel-container,
+    .contact-panel-container {
+        height: 1012px;
+    }
+
+    .fa-github {
+        font-size: 1.6em;
+        top: 7px;
+        left: 14px;
+    }
+}
+
 @media only screen and (max-width: 1799px) {
     .app-container {
         width: 1600px;
     }
     
-    .panel-container {
+    .bio-panel-container,
+    .project-panel-container,
+    .contact-panel-container {
         height: 900px;
     }
 
@@ -151,7 +182,9 @@ input:checked + .slider:before {
         width: 1440px;
     }
     
-    .panel-container {
+    .bio-panel-container,
+    .project-panel-container,
+    .contact-panel-container {
         height: 810px;
     }
 
@@ -170,7 +203,9 @@ input:checked + .slider:before {
         width: 1024px;
     }
     
-    .panel-container {
+    .bio-panel-container,
+    .project-panel-container,
+    .contact-panel-container {
         height: 576px;
     }
 
@@ -198,7 +233,9 @@ input:checked + .slider:before {
         width: 768px;
     }
     
-    .panel-container {
+    .bio-panel-container,
+    .project-panel-container,
+    .contact-panel-container {
         height: 432px;
     }
 
@@ -226,7 +263,9 @@ input:checked + .slider:before {
         width: 320px;
     }
     
-    .panel-container {
+    .bio-panel-container,
+    .project-panel-container,
+    .contact-panel-container {
         /* height: 180px; */
         height: 405px;
     }

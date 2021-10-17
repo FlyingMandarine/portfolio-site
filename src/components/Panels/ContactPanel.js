@@ -5,9 +5,6 @@ import envelope from '../../images/envelope-transparent.png'
 const ContactPanel = () => {
 
     const containerDivStyle = {
-        display: 'flex',
-        borderTop: 'solid 5px #909090',
-        borderBottom: 'solid 5px #909090',
         backgroundColor: 'white',
     }
 
@@ -16,7 +13,6 @@ const ContactPanel = () => {
         flexDirection: 'column',
         justifyContent: 'center',
         flexBasis: '66%',
-        backgroundColor: '#EFEFEF',
         height: '100%',
         paddingLeft: '6.66%',
         paddingRight: '5.73%',
@@ -54,7 +50,7 @@ const ContactPanel = () => {
     }
 
     const smallInputStyle = {
-        backgroundColor: '#EFEFEF',
+        //backgroundColor: '#EFEFEF',
         border: 'solid 1px #909090',
         width: '64%',
         height: '8.5%',
@@ -63,7 +59,7 @@ const ContactPanel = () => {
     }
 
     const largeInputStyle = {
-        backgroundColor: '#EFEFEF',
+        //backgroundColor: '#EFEFEF',
         border: 'solid 1px #909090',
         width: '64%',
         height: '36%',
@@ -74,25 +70,14 @@ const ContactPanel = () => {
     const sendButtonStyle = {
         fontSize: '1.9em',
         fontWeight: 500,
-        border: 'solid 3px black',
         width: '17.5%',
         height: '12.5%',
     }
 
     const iconsStyle = {
-        color: 'black',
         marginLeft: 20,
         marginRight: 20,
         opacity: '900%',
-    }
-
-    const buttonEnter = (e) => {
-        e.target.style.backgroundColor = '#FEE035'
-    }
-
-    const buttonLeave = (e) => {
-        e.target.style.backgroundColor = '#EFEFEF'
-        e.target.style.border = 'solid 3px black'
     }
 
     const iconEnter = (e) => {
@@ -106,10 +91,10 @@ const ContactPanel = () => {
     }
 
     return (
-        <div style={ containerDivStyle } className='panel-container'>
-            <div style={ leftPanelStyle }>
+        <div style={ containerDivStyle } className='contact-panel-container'>
+            <div style={ leftPanelStyle } className='contact-left-panel'>
                 <h1 style={ h1Style }>Contact me</h1>
-                
+
                 <p style={ paraStyle }>
                     If you have any feedback, feel free to contact me using the form below.<br />
                     I aim to reply to every message within 24 hours.
@@ -117,19 +102,15 @@ const ContactPanel = () => {
 
                 <form action="https://formspree.io/f/xyylvljj" method="POST">
                     <label style={ labelStyle } htmlFor='name'>Name *</label><br />
-                    <input style={ smallInputStyle } id='name' name='name' /><br />
+                    <input style={ smallInputStyle } id='name' className='small-input' name='name' /><br />
 
                     <label style={ labelStyle } htmlFor='_replyto'>Email *</label><br />
-                    <input style={ smallInputStyle } name='_replyto' /><br />
+                    <input style={ smallInputStyle } className='small-input' name='_replyto' /><br />
 
                     <label style={ labelStyle } htmlFor='message'>Message *</label><br />
-                    <textarea style={ largeInputStyle } id='message' name='message' /><br />
+                    <textarea style={ largeInputStyle } id='message' className='large-input' name='message' /><br />
 
-                    <button
-                        style={ sendButtonStyle }
-                        onMouseEnter={ (e) => buttonEnter(e) }
-                        onMouseLeave={ (e) => buttonLeave(e) }
-                    >Send</button>
+                    <button style={ sendButtonStyle } className='send-btn'>Send</button>
                 </form>
 
             </div>

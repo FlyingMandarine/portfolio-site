@@ -4,17 +4,12 @@ import strengthgap from '../../images/strengthgap.png'
 
 const Project1Panel = () => {
 
-    const containerDivStyle = {
-        display: 'flex',
-    }
-
     const leftPanelStyle = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         position: 'relative',
         flexBasis: '34%',
-        backgroundColor: 'white',
         paddingLeft: '6.66%',
         paddingRight: '5.73%',
         height: '100%',
@@ -34,6 +29,7 @@ const Project1Panel = () => {
         fontSize: '2.4em',
         fontWeight: 500,
         backgroundColor: '#FEE035',
+        color: 'black',
         width: '35.2%',
         height: '4.8%',
         lineHeight: '220%',
@@ -67,10 +63,7 @@ const Project1Panel = () => {
     const seeItSpanStyle = {
         fontSize: '1.9em',
         fontWeight: 500,
-        backgroundColor: 'white',
-        color: 'black',
-        border: 'solid 3px black',
-        padding: '3%',
+        padding: '3% 6%',
     }
 
     const linkStyle = {
@@ -81,9 +74,6 @@ const Project1Panel = () => {
         position: 'relative',
         fontSize: '1.9em',
         fontWeight: 500,
-        backgroundColor: 'black',
-        border: 'solid 3px black',
-        color: 'white',
         padding: '3% 3% 3% 14%',
         marginLeft: '4.75%',
     }
@@ -93,25 +83,9 @@ const Project1Panel = () => {
         pointerEvents: 'none',
     }
 
-    const buttonEnter = (e) => {
-        e.target.style.backgroundColor = '#FEE035'
-        e.target.style.color = 'black'
-    }
-
-    const seeItButtonLeave = (e) => {
-        e.target.style.backgroundColor = '#FFFFFF'
-        e.target.style.border = 'solid 3px black'
-    }
-
-    const repoButtonLeave = (e) => {
-        e.target.style.backgroundColor = 'black'
-        e.target.style.color = 'white'
-        e.target.style.border = 'solid 3px black'
-    }
-    
     return (
-        <div style={ containerDivStyle } className='panel-container'>
-            <div style={ leftPanelStyle }>
+        <div className='project-panel-container'>
+            <div style={ leftPanelStyle } className='project-left-panel'>
                 <div style={ projectDivStyle }>PROJECT</div>
 
                 <h1 style={ h1Style }>Strength Gap</h1>
@@ -128,15 +102,12 @@ const Project1Panel = () => {
                 </p>
                 <div style={ buttonsDivStyle }>
                     <a style={ linkStyle } href='https://www.patrice-hermenault.com' target='_blank' rel='noreferrer'>
-                        <span style={ seeItSpanStyle }
-                            onMouseEnter={ (e) => buttonEnter(e) }
-                            onMouseLeave={ (e) => seeItButtonLeave(e) }>See it in action
+                        <span style={ seeItSpanStyle } className='see-it-span'>
+                            See it in action
                         </span>
                     </a>
                     <a style={ linkStyle } href='https://github.com/FlyingMandarine/strengthgap-react' target='_blank' rel='noreferrer'>
-                        <span style={ repoSpanStyle }
-                            onMouseEnter={ (e) => buttonEnter(e) }
-                            onMouseLeave={ (e) => repoButtonLeave(e) }>
+                        <span style={ repoSpanStyle } className='repo-span'>
                             <i style={ githubStyle } className='fab fa-github' />Repo
                         </span>
                     </a>
