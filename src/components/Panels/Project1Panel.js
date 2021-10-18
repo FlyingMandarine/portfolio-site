@@ -84,36 +84,38 @@ const Project1Panel = () => {
     }
 
     return (
-        <div className='project-panel-container'>
-            <div style={ leftPanelStyle } className='project-left-panel'>
-                <div style={ projectDivStyle }>PROJECT</div>
+        <div className='scroll-container'>
+            <div className='project-panel-container'>
+                <div style={ leftPanelStyle } className='project-left-panel'>
+                    <div style={ projectDivStyle }>PROJECT</div>
 
-                <h1 style={ h1Style }>Strength Gap</h1>
-                <h2 style={ h2Style }>A Tool to Check for Muscle Imbalance</h2>
+                    <h1 style={ h1Style }>Strength Gap</h1>
+                    <h2 style={ h2Style }>A Tool to Check for Muscle Imbalance</h2>
 
-                <p style={ paraStyle }>
-                    A project made with the MERN stack (MongoDB, Express, React, Node.js).<br /><br />
-                    Gyms can be intimidating, especially for newcomers. Strength Gap is my attempt
-                    at alleviating one concern: <em>What should I do there?</em><br /><br />
-                    It allows the user to select any exercise and see which muscle group
-                    they primarily target, and then combine those exercises to check for potential
-                    gaps in your exercise routine.<br /><br />
-                    It comes complete with a registration feature to save, edit, and delete your workouts.
-                </p>
-                <div style={ buttonsDivStyle }>
-                    <a style={ linkStyle } href='https://www.patrice-hermenault.com' target='_blank' rel='noreferrer'>
-                        <span style={ seeItSpanStyle } className='see-it-span'>
-                            See it in action
-                        </span>
-                    </a>
-                    <a style={ linkStyle } href='https://github.com/FlyingMandarine/strengthgap-react' target='_blank' rel='noreferrer'>
-                        <span style={ repoSpanStyle } className='repo-span'>
-                            <i style={ githubStyle } className='fab fa-github' />Repo
-                        </span>
-                    </a>
+                    <p style={ paraStyle }>
+                        A project made with the MERN stack (MongoDB, Express, React, Node.js).<br /><br />
+                        Gyms can be intimidating, especially for newcomers. Strength Gap is my attempt
+                        at alleviating one concern: <em>What should I do there?</em><br /><br />
+                        It allows the user to select any exercise and see which muscle group
+                        they primarily target, and then combine those exercises to check for potential
+                        gaps in your exercise routine.<br /><br />
+                        It comes complete with a registration feature to save, edit, and delete your workouts.
+                    </p>
+                    <div style={ buttonsDivStyle }>
+                        <a style={ linkStyle } href='https://www.patrice-hermenault.com' target='_blank' rel='noreferrer'>
+                            <span style={ seeItSpanStyle } className='see-it-span'>
+                                See it in action
+                            </span>
+                        </a>
+                        <a style={ linkStyle } href='https://github.com/FlyingMandarine/strengthgap-react' target='_blank' rel='noreferrer'>
+                            <span style={ repoSpanStyle } className='repo-span'>
+                                <i style={ githubStyle } className='fab fa-github' />Repo
+                            </span>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div style={ rightPanelStyle }>
+                <div style={ rightPanelStyle }>
+                </div>
             </div>
         </div>
     )

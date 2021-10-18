@@ -1,13 +1,16 @@
 import { createGlobalStyle } from 'styled-components'
 
+import envelope from '../images/envelope-transparent.png'
+
 export const GlobalStyles = createGlobalStyle`
     body {
         background: ${({ theme }) => theme.body};
         color: ${({ theme }) => theme.text};
-        transition all 0.50s linear;
+        transition: color 1s linear;
     }
 
     .bio-panel-container,
+    .project-panel-container,
     .contact-panel-container {
         display: flex;
         border-top: ${({ theme }) => theme.bioBorder};
@@ -66,5 +69,16 @@ export const GlobalStyles = createGlobalStyle`
     .fa-github-square,
     .fa-envelope-square {
         color: ${({ theme }) => theme.black};
+    }
+
+    .fa-linkedin:hover,
+    .fa-github-square:hover,
+    .fa-envelope-square:hover {
+        color: #FEE035;
+    }
+
+    .contact-right-panel {
+        background: linear-gradient(${({ theme }) => theme.contactBg}),
+                    url(${envelope}) center/cover;
     }
 `

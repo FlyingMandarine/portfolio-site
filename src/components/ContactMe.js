@@ -5,6 +5,7 @@ const ContactMe = () => {
     const containerStyle = {
         fontSize: '2.2em',
         fontWeight: 700,
+        color: 'black',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
