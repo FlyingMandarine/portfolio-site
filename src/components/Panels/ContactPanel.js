@@ -65,12 +65,12 @@ const ContactPanel = () => {
         fontSize: '1.9em',
         fontWeight: 500,
         width: '17.5%',
-        height: '12.5%',
+        height: '2.8em',
     }
 
     const iconsStyle = {
-        marginLeft: 20,
-        marginRight: 20,
+        marginLeft: '.4em',
+        marginRight: '.4em',
         opacity: '900%',
     }
 
@@ -94,9 +94,9 @@ const ContactPanel = () => {
 
                         <label style={ labelStyle } htmlFor='message'>Message *</label><br />
                         <textarea style={ largeInputStyle } id='message' className='large-input' name='message' /><br />
-
-                        <button style={ sendButtonStyle } className='send-btn'>Send</button>
                     </form>
+
+                    <button style={ sendButtonStyle } className='send-btn'>Send</button>
 
                 </div>
                 <div style={ rightPanelStyle } className='contact-right-panel'>

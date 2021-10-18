@@ -1,5 +1,7 @@
 import React from 'react'
 
+import ContactMe from '../ContactMe'
+
 import strengthgap from '../../images/strengthgap.png'
 
 const Project1Panel = () => {
@@ -16,6 +18,7 @@ const Project1Panel = () => {
     }
 
     const rightPanelStyle = {
+        position: 'relative',
         flexBasis: '66%',
         backgroundColor: 'grey',
         height: '100%',
@@ -32,9 +35,11 @@ const Project1Panel = () => {
         color: 'black',
         width: '35.2%',
         height: '4.8%',
-        lineHeight: '220%',
         textAlign: 'right',
-        paddingRight: '7.5%',
+        paddingRight: '5%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
     }
 
     const h1Style = {
@@ -53,7 +58,7 @@ const Project1Panel = () => {
         fontSize: '1.6em',
         fontWeight: 400,
         lineHeight: 1.6,
-        marginBottom: '12%',
+        marginBottom: '15%',
     }
 
     const buttonsDivStyle = {
@@ -87,7 +92,7 @@ const Project1Panel = () => {
         <div className='scroll-container'>
             <div className='project-panel-container'>
                 <div style={ leftPanelStyle } className='project-left-panel'>
-                    <div style={ projectDivStyle }>PROJECT</div>
+                    <div style={ projectDivStyle }><span>PROJECT</span></div>
 
                     <h1 style={ h1Style }>Strength Gap</h1>
                     <h2 style={ h2Style }>A Tool to Check for Muscle Imbalance</h2>
@@ -115,6 +120,7 @@ const Project1Panel = () => {
                     </div>
                 </div>
                 <div style={ rightPanelStyle }>
+                    <ContactMe />
                 </div>
             </div>
         </div>

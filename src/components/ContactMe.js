@@ -9,9 +9,9 @@ const ContactMe = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        position: 'fixed',
-        top: '90vh',
-        right: '2.4%',
+        position: 'absolute',
+        bottom: '4%',
+        right: '2.2em',
         backgroundColor: '#FDE000',
         boxShadow: '0 3px 6px #00000029',
         cursor: 'pointer',
@@ -25,7 +25,7 @@ const ContactMe = () => {
 
     const scrollWin = () => {
         window.scroll({
-            top: 9999,
+            top: 99999,
             behavior: 'smooth',
         })
     }

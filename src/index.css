@@ -36,16 +36,18 @@ html {
 .switch {
     position: relative;
     display: inline-block;
-    width: 62px;
-    /* width: 50%; */
-    height: 30px;
+    /* width: 62px; */
+    width: 3.85em;
+    /* height: 30px; */
+    height: 1.9em;
 }
 
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    margin-top: 1.5em;
 }
 
 .slider {
@@ -57,7 +59,7 @@ html {
     bottom: 0;
     background-color: white;
     -webkit-transition: .4s;
-    transition: .4s;
+    transition: transform .4s;
     border-radius: 34px;
     box-shadow: 0 0 1px #707070;
 }
@@ -65,13 +67,17 @@ html {
 .slider:before {
     position: absolute;
     content: '';
-    height: 24px;
-    width: 24px;
-    left: 6px;
-    bottom: 3px;
+    /* height: 24px; */
+    height: 1.5em;
+    /* width: 24px; */
+    width: 1.5em;
+    /* left: 6px; */
+    left: .4em;
+    /* bottom: 3px; */
+    bottom: .2em;
     background-color: black;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 1s;
+    transition: transform 1s;
     border-radius: 50%;
 }
 
@@ -88,9 +94,10 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(25px);
-    -ms-transform: translateX(25px);
-    transform: translateX(25px);
+    -webkit-transform: translateX(1.6em);
+    -ms-transform: translateX(1.6em);
+    /* transform: translateX(25px); */
+    transform: translateX(1.6em);
 }
 
 .contactme-div {
@@ -115,7 +122,7 @@ form {
     flex-direction: column;
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1960px) {
     .app-container {
         width: 1920px;
     }
@@ -132,7 +139,8 @@ form {
     }
 }
 
-@media only screen and (max-width: 1919px) {
+@media only screen and (max-width: 1959px) {
+    .outer-app-container,
     .app-container {
         width: 1800px;
     }
@@ -150,7 +158,7 @@ form {
     }
 }
 
-@media only screen and (max-width: 1799px) {
+@media only screen and (max-width: 1839px) {
     .app-container {
         width: 1600px;
     }
@@ -182,7 +190,7 @@ form {
     }
 }
 
-@media only screen and (max-width: 1599px) {
+@media only screen and (max-width: 1639px) {
     body {
         font-size: .8rem;
     }
@@ -203,7 +211,7 @@ form {
     }
 }
 
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 1489px) {
     body {
         font-size: .6rem;
     }
@@ -233,7 +241,7 @@ form {
     }
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1063px) {
     body {
         font-size: .5rem;
     }
@@ -263,7 +271,7 @@ form {
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 807px) {
     body {
         font-size: .2rem;
     }
@@ -271,12 +279,11 @@ form {
     .app-container {
         width: 320px;
     }
-    
+
     .bio-panel-container,
     .project-panel-container,
     .contact-panel-container {
-        /* height: 180px; */
-        height: 405px;
+        height: 180px;
     }
 
     .contactme-div {
