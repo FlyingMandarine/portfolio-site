@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateAchievement } from '../../reducers/achievementReducer'
 
 import ContactMe from '../ContactMe'
 
 import strengthgap from '../../images/strengthgap.png'
 
 const Project1Panel = () => {
+    const dispatch = useDispatch()
+    const achievement = useSelector(state => state)
+
+    const [ linkClicked, setLinkClicked ] = useState(false)
 
     const leftPanelStyle = {
         display: 'flex',
@@ -88,6 +94,19 @@ const Project1Panel = () => {
         pointerEvents: 'none',
     }
 
+    const handleLinkClick = () => {
+        if (linkClicked === false) {
+            const newAchievement = {
+                title: 'Curiosity',
+                text: 'You\'ve checked out Strength Gap.',
+                counter: achievement.counter + 1
+            }
+            dispatch(updateAchievement(newAchievement))
+
+            setLinkClicked(true)
+        }
+    }
+
     return (
         <div className='scroll-container'>
             <div className='project-panel-container'>
@@ -107,7 +126,7 @@ const Project1Panel = () => {
                         It comes complete with a registration feature to save, edit, and delete your workouts.
                     </p>
                     <div style={ buttonsDivStyle }>
-                        <a style={ linkStyle } href='https://www.patrice-hermenault.com' target='_blank' rel='noreferrer'>
+                        <a style={ linkStyle } href='https://strength-gap.herokuapp.com/' target='_blank' rel='noreferrer' onMouseDown={ () => handleLinkClick() }>
                             <span style={ seeItSpanStyle } className='see-it-span'>
                                 See it in action
                             </span>
@@ -120,7 +139,7 @@ const Project1Panel = () => {
                     </div>
                 </div>
                 <div style={ rightPanelStyle }>
-                    <ContactMe />
+                    {/* <ContactMe /> */}
                 </div>
             </div>
         </div>

@@ -22,6 +22,10 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.leftPanelBgColor};
     }
 
+    .achievement-div {
+        background-color: ${({ theme }) => theme.achievementBgColor};
+    }
+
     .skills-div {
         background-color: ${({ theme }) => theme.white};
     }

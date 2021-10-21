@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { updateAchievement } from '../reducers/achievementReducer'
 
 const ContactMe = () => {
+    const dispatch = useDispatch()
+    const achievement = useSelector(state => state)
+
+    const [ clicked, setClicked ] = useState(false)
 
     const containerStyle = {
         fontSize: '2.2em',
@@ -28,6 +34,17 @@ const ContactMe = () => {
             top: 99999,
             behavior: 'smooth',
         })
+
+        if (clicked === false) {
+            const newAchievement = {
+                title: 'Contact me!',
+                text: 'Clicked on the big yellow box.',
+                counter: achievement.counter + 1,
+            }
+            dispatch(updateAchievement(newAchievement))
+
+            setClicked(true)
+        }
     }
 
     return (

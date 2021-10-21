@@ -38,6 +38,7 @@ const BioPanel = ({ theme, handleToggler }) => {
         paddingLeft: '6.5%',
         paddingRight: '6.5%',
         height: '100%',
+        position: 'relative',
     }
 
     const rightPanelStyle = {
@@ -154,7 +155,7 @@ const BioPanel = ({ theme, handleToggler }) => {
                     </div>
                 </div>
                 <div style={ rightPanelStyle } className='biopanel-right'>
-                    <ContactMe />
+                    {/* <ContactMe /> */}
                     <div style={ darkToggleStyle }>
                         <span style={ darkSpanStyle }>
                             {

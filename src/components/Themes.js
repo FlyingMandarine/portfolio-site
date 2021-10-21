@@ -9,7 +9,8 @@ export const lightTheme = {
     bioBorder: 'solid 5px #909090',
     projectLeftPanelBgColor: 'white',
     seeItSpanBgColor: 'white',
-    contactBg: 'rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)'
+    contactBg: 'rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)',
+    achievementBgColor: '#7E7E7E',
 }
 
 export const darkTheme = {
@@ -23,5 +24,6 @@ export const darkTheme = {
     bioBorder: 'solid 5px white',
     projectLeftPanelBgColor: '#696969',
     seeItSpanBgColor: '#696969',
-    contactBg: 'rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)'
+    contactBg: 'rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)',
+    achievementBgColor: '#696969',
 }
