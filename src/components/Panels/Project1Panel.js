@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAchievement } from '../../reducers/achievementReducer'
 
-import ContactMe from '../ContactMe'
-
 import strengthgap from '../../images/strengthgap.png'
 
 const Project1Panel = () => {
@@ -139,7 +137,6 @@ const Project1Panel = () => {
                     </div>
                 </div>
                 <div style={ rightPanelStyle }>
-                    {/* <ContactMe /> */}
                 </div>
             </div>
         </div>

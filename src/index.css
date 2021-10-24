@@ -100,11 +100,6 @@ input:checked + .slider:before {
     transform: translateX(1.6em);
 }
 
-.contactme-div {
-    width: 222px;
-    height: 58px;
-}
-
 .project-panel-container {
     display: flex;
 }
@@ -139,6 +134,14 @@ form {
         height: 128px;
     }
 
+    .contactme-div {
+        width: 222px;
+        height: 58px;
+    
+        left: calc(50% + 690px);
+        bottom: calc(50% - 500px);
+    }
+
     .fa-github {
         font-size: 1.7em;
         top: 15%;
@@ -150,7 +153,7 @@ form {
     .app-container {
         width: 1800px;
     }
-    
+
     .bio-panel-container,
     .project-panel-container,
     .contact-panel-container {
@@ -161,6 +164,14 @@ form {
         top: calc(50% - 435px);
         width: 555px;
         height: 128px;
+    }
+
+    .contactme-div {
+        width: 222px;
+        height: 58px;
+
+        left: calc(50% + 640px);
+        bottom: calc(50% - 470px);
     }
 
     .fa-github {
@@ -194,6 +205,9 @@ form {
     .contactme-div {
         width: 180px;
         height: 46px;
+
+        left: calc(50% + 590px);
+        bottom: calc(50% - 420px);
     }
 
     .fa-github {
@@ -232,6 +246,9 @@ form {
     .contactme-div {
         width: 150px;
         height: 46px;
+
+        left: calc(50% + 550px);
+        bottom: calc(50% - 380px);
     }
 }
 
@@ -259,6 +276,9 @@ form {
     .contactme-div {
         width: 130px;
         height: 36px;
+
+        left: calc(50% + 360px);
+        bottom: calc(50% - 260px);
     }
 
     .biopanel-right {
@@ -295,6 +315,9 @@ form {
     .contactme-div {
         width: 100px;
         height: 30px;
+
+        left: calc(50% + 265px);
+        bottom: calc(50% - 195px);
     }
 
     .biopanel-right {

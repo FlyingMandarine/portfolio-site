@@ -1,7 +1,5 @@
 import React from 'react'
 
-import ContactMe from '../ContactMe'
-
 import polaroid from '../../images/polaroid-small.png'
 import cypress from '../../images/cypress-small.png'
 import express from '../../images/express-small.png'
@@ -155,7 +153,6 @@ const BioPanel = ({ theme, handleToggler }) => {
                     </div>
                 </div>
                 <div style={ rightPanelStyle } className='biopanel-right'>
-                    {/* <ContactMe /> */}
                     <div style={ darkToggleStyle }>
                         <span style={ darkSpanStyle }>
                             {
