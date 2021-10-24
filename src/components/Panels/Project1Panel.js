@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateAchievement } from '../../reducers/achievementReducer'
 
-import strengthgap from '../../images/strengthgap.png'
+import strengthgap from '../../images/strengthgap.webp'
 
 const Project1Panel = () => {
     const dispatch = useDispatch()

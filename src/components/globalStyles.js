@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import envelope from '../images/envelope-transparent.png'
+import envelope from '../images/envelope-transparent.webp'
 
 export const GlobalStyles = createGlobalStyle`
     body {

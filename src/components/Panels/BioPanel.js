@@ -1,13 +1,13 @@
 import React from 'react'
 
-import polaroid from '../../images/polaroid-small.png'
-import cypress from '../../images/cypress-small.png'
-import express from '../../images/express-small.png'
-import jest from '../../images/jest-small.png'
-import mongodb from '../../images/mongodb-small.png'
-import node from '../../images/node-small.png'
-import reactjs from '../../images/reactjs-small.png'
-import reduxjs from '../../images/reduxjs-small.png'
+import polaroid from '../../images/polaroid-small.webp'
+import cypress from '../../images/cypress-small.webp'
+import express from '../../images/express-small.webp'
+import jest from '../../images/jest-small.webp'
+import mongodb from '../../images/mongodb-small.webp'
+import node from '../../images/node-small.webp'
+import reactjs from '../../images/reactjs-small.webp'
+import reduxjs from '../../images/reduxjs-small.webp'
 
 const BioPanel = ({ theme, handleToggler }) => {
 
