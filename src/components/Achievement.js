@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
+
+import { motion } from 'framer-motion'
 
 const Achievement = () => {
     const title = useSelector(state => state.title)
     const text = useSelector(state => state.text)
     const counter = useSelector(state => state.counter)
+
+    const [showing, setShowing] = useState(false)
+
+    // Hook to trigger the achievement panel showing for a small amount of time before being hidden.
+    useEffect(() => {
+        setTimeout(() => {
+            setShowing(false)
+        }, 1000)
+
+        setTimeout(() => {
+            setShowing(true)
+        }, 1000)
+    }, [ counter ])
 
     const outerDivStyle = {
         fontWeight: 500,
@@ -12,7 +27,19 @@ const Achievement = () => {
         color: 'white',
         lineHeight: '3em',
         position: 'fixed',
+        left: -50,
         zIndex: 1,
+        overflow: 'hidden',
+    }
+
+    const outerDivStyleComplete = {
+        fontWeight: 500,
+        display: 'flex',
+        color: 'white',
+        lineHeight: '3em',
+        position: 'fixed',
+        zIndex: 1,
+        backgroundColor: 'darkgoldenrod',
     }
 
     const innerDivStyle = {
@@ -53,20 +80,36 @@ const Achievement = () => {
     }
 
     return (
-        <div style={ outerDivStyle } className='achievement-div'>
-            <i style={ trophyStyle } className='fas fa-trophy' />
-            <div style={ innerDivStyle }>
-                <p style={ titleStyle }>Achievement Unlocked - <span style={ titleSpanStyle }>{ title }</span></p>
-                <p style={ descriptionStyle }>{ text }</p>
-                <p style={ counterStyle }>
-                    { counter }/5 found
-                </p>
-                {
-                        counter === 5 &&
-                        <div style={ successStyle }>Well done!</div>
-                }
+        <>
+        { showing === true &&
+            <div
+                initial={{ x: '-560px' }}
+
+                animate={{ x: ['-560px', '0px', '0px', '-560px'] }}
+
+                transition={{
+                    duration: 5,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.8, 1]
+                }}
+
+                style={ counter === 5 ? outerDivStyleComplete : outerDivStyle } className='achievement-div'
+            >
+                <i style={ trophyStyle } className='fas fa-trophy' />
+                <div style={ innerDivStyle }>
+                    <p style={ titleStyle }>Achievement Unlocked - <span style={ titleSpanStyle }>{ title }</span></p>
+                    <p style={ descriptionStyle }>{ text }</p>
+                    <p style={ counterStyle }>
+                        { counter }/5 found
+                    </p>
+                    {
+                            counter === 5 &&
+                            <div style={ successStyle }>Well done!</div>
+                    }
+                </div>
             </div>
-        </div>
+        }
+        </>
     )
 }
 
